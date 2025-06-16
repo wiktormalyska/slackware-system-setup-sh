@@ -238,8 +238,53 @@ echo "Instalowanie narzędzi deweloperskich..."
 # Wyłącz krytyczne błędy dla sekcji instalacji pakietów
 set +e
 
+# wszystkie pakiety libx11
+wget http://slackware.uk/slackware/slackware64-15.0/x/libX11-1.7.2-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXt-1.2.1-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXext-1.3.4-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXmu-1.1.3-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXpm-3.5.13-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXft-2.3.3-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXinerama-1.1.4-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXcursor-1.2.0-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXcomposite-0.4.5-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXdamage-1.1.5-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXrandr-1.5.2-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXi-1.8.2-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXss-1.2.3-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXtst-1.2.3-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXv-1.0.11-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXvMC-1.0.11-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXxf86vm-1.1.5-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libxcb-1.14-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXau-1.0.9-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXdmcp-1.1.3-x86_64-1.txz
+wget http://slackware.uk/slackware/slackware64-15.0/x/libXfont-1.5.3-x86_64-1.txz
+
+sudo installpkg libX11-1.7.2-x86_64-1.txz
+sudo installpkg libXt-1.2.1-x86_64-1.txz
+sudo installpkg libXext-1.3.4-x86_64-1.txz
+sudo installpkg libXmu-1.1.3-x86_64-1.txz
+sudo installpkg libXpm-3.5.13-x86_64-1.txz
+sudo installpkg libXft-2.3.3-x86_64-1.txz
+sudo installpkg libXinerama-1.1.4-x86_64-1.txz
+sudo installpkg libXcursor-1.2.0-x86_64-1.txz
+sudo installpkg libXcomposite-0.4.5-x86_64-1.txz
+sudo installpkg libXdamage-1.1.5-x86_64-1.txz
+sudo installpkg libXrandr-1.5.2-x86_64-1.txz
+sudo installpkg libXi-1.8.2-x86_64-1.txz
+sudo installpkg libXss-1.2.3-x86_64-1.txz
+sudo installpkg libXtst-1.2.3-x86_64-1.txz
+sudo installpkg libXv-1.0.11-x86_64-1.txz
+sudo installpkg libXvMC-1.0.11-x86_64-1.txz
+sudo installpkg libXxf86vm-1.1.5-x86_64-1.txz
+sudo installpkg libxcb-1.14-x86_64-1.txz
+sudo installpkg libXau-1.0.9-x86_64-1.txz
+sudo installpkg libXdmcp-1.1.3-x86_64-1.txz
+sudo installpkg libXfont-1.5.3-x86_64-1.txz
+
 # Lista wymaganych pakietów deweloperskich, w tym guile dla libguile-3.0
-required_packages="gcc gcc-g++ make bison flex guile guile-dev readline readline-devel ncurses ncurses-devel gc libgc boehm-gc glibc-devel libc-devel kernel-headers kernel-source binutils"
+required_packages="gcc gcc-g++ make bison flex guile guile-dev readline readline-devel ncurses ncurses-devel gc libgc boehm-gc glibc-devel libc-devel kernel-headers kernel-source binutils "
 slackpkg install binutils plotutils xorgproto libXt aaa_glibc autoconfig automake m4
 
 

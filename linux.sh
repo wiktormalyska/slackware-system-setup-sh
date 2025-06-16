@@ -545,6 +545,10 @@ if ! ldconfig -p | grep -q libguile-3.0.so; then
     fi
 fi
 
+# instalacja libxt
+wget http://ftp.slackware.pl/pub/slackware/slackware64-15.0/slackware64/x/libXt-1.2.1-x86_64-2.txz
+upgradepkg --install-new libXt-1.2.1-x86_64-2.txz
+
 # Wróć do katalogu qcl
 cd /tmp/qcl-0.6.7
 
